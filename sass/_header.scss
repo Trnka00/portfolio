@@ -1,9 +1,30 @@
 @use 'variables';
 
 .header {
-  background: linear-gradient(45deg, #0a2b1c, #035834, #0e3825, #062919);
+  background-image: repeating-linear-gradient(
+      73deg,
+      rgb(2, 56, 26) 0px,
+      rgb(2, 56, 26) 27px,
+      transparent 27px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      377deg,
+      rgb(2, 56, 26) 0px,
+      rgb(2, 56, 26) 27px,
+      transparent 27px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      55deg,
+      rgb(2, 56, 26) 0px,
+      rgb(2, 56, 26) 27px,
+      transparent 27px,
+      transparent 30px
+    ),
+    linear-gradient(115deg, rgb(230, 245, 14), rgb(251, 249, 233));
   background-size: 400% 400%;
-  animation: gradient 10s ease-in-out infinite;
+  animation: gradient 120s ease-in-out infinite;
   height: 100vh;
   color: variables.$color-white;
   clip-path: polygon(100% 0, 100% 90%, 30% 90%, 0 60%, 0 0);
@@ -15,13 +36,13 @@
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 0% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 

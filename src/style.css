@@ -31,13 +31,13 @@ html {
 body {
   box-sizing: inherit;
   font-family: "Archivo", sans-serif;
-  background-color: #0f5738;
+  background-color: #0b462c;
 }
 
 .header {
-  background: linear-gradient(45deg, #0a2b1c, #035834, #0e3825, #062919);
+  background-image: repeating-linear-gradient(73deg, #02381a 0px, #02381a 27px, transparent 27px, transparent 30px), repeating-linear-gradient(377deg, #02381a 0px, #02381a 27px, transparent 27px, transparent 30px), repeating-linear-gradient(55deg, #02381a 0px, #02381a 27px, transparent 27px, transparent 30px), linear-gradient(115deg, #e6f50e, #fbf9e9);
   background-size: 400% 400%;
-  animation: gradient 10s ease-in-out infinite;
+  animation: gradient 120s ease-in-out infinite;
   height: 100vh;
   color: #faebd7;
   clip-path: polygon(100% 0, 100% 90%, 30% 90%, 0 60%, 0 0);
@@ -50,13 +50,13 @@ body {
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 0% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 .nav-logo-wrap {
@@ -147,7 +147,7 @@ body {
 }
 
 .projects {
-  background-color: #0f5738;
+  background-color: #0b462c;
 }
 .projects h2 {
   color: #65bf65;
@@ -158,7 +158,7 @@ body {
 }
 
 .project {
-  background-color: #0d4d31;
+  background-color: #083622;
   color: #faebd7;
   width: 80%;
   margin: 10rem auto;
