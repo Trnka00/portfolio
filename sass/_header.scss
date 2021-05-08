@@ -1,0 +1,97 @@
+@use 'variables';
+
+.header {
+  background-color: variables.$color-main;
+  height: 100vh;
+  color: variables.$color-white;
+  clip-path: polygon(100% 0, 100% 90%, 40% 90%, 0 60%, 0 0);
+
+  @media only screen and (max-width: 950px) {
+    clip-path: polygon(100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+  }
+}
+
+.nav-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-align: center;
+  margin: 1.5rem 0 0 6rem;
+  height: 5rem;
+  letter-spacing: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  font-weight: 200;
+  list-style-type: none;
+  margin-right: 6rem;
+
+  &__link {
+    a {
+      color: variables.$color-btn;
+      text-decoration: none;
+      &:hover {
+        color: rgb(211, 211, 211);
+      }
+    }
+  }
+  &__link:not(:last-child) {
+    margin-right: 4rem;
+  }
+}
+.heading {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+
+  @media only screen and (max-width: 950px) {
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  &__main {
+    font-size: 7rem;
+    font-weight: 600;
+  }
+
+  &__sub {
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+
+    width: 100%;
+    text-align: center;
+    color: variables.$color-btn;
+  }
+}
+.illustration {
+  position: absolute;
+  top: 25%;
+  right: 15%;
+  // transform: translateX(50%);
+
+  @media only screen and (max-width: 950px) {
+    top: 35%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @media only screen and (max-width: 600px) {
+    top: 45%;
+  }
+  .hero {
+    height: 45rem;
+
+    @media only screen and (max-width: 600px) {
+      height: 35rem;
+    }
+  }
+}

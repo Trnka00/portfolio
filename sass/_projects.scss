@@ -1,0 +1,90 @@
+@use 'variables';
+.projects {
+  background-color: variables.$color-bg-light;
+  h2 {
+    color: variables.$color-white;
+    font-size: 7rem;
+    padding-top: 6rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.project {
+  background-color: variables.$color-card;
+  color: variables.$color-white;
+  width: 80%;
+  margin: 10rem auto;
+  padding: 6rem 0;
+
+  &__wrapper {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1080px;
+
+    @media only screen and (max-width: 950px) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  &__image {
+    height: 35rem;
+    filter: brightness(0.8);
+    transition: all 0.2s ease-out;
+    border-radius: 2rem;
+    &:hover {
+      filter: brightness(0.9);
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 950px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    @media only screen and (max-width: 950px) {
+      margin: 2rem 0;
+    }
+  }
+  &__text {
+    font-size: 1.8rem;
+    // width: 70%;
+    line-height: 1.6;
+    @media only screen and (max-width: 950px) {
+      width: 80%;
+    }
+  }
+  &__btn {
+    background-color: variables.$color-btn;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    margin: 2rem 1rem 0 0;
+    border-radius: 5rem;
+    text-decoration: none;
+    color: variables.$color-main;
+    font-size: 1.6rem;
+    float: left;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      background-color: #f8e68a;
+    }
+  }
+  &__github {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    img {
+      height: 3.5rem;
+    }
+  }
+}
