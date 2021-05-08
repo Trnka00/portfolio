@@ -38,7 +38,7 @@ body {
   background-color: #113b29;
   height: 100vh;
   color: #faebd7;
-  clip-path: polygon(100% 0, 100% 90%, 40% 90%, 0 60%, 0 0);
+  clip-path: polygon(100% 0, 100% 90%, 30% 90%, 0 60%, 0 0);
 }
 @media only screen and (max-width: 950px) {
   .header {
@@ -70,6 +70,7 @@ body {
 .navbar__link a {
   color: #f8d82e;
   text-decoration: none;
+  font-weight: 500;
 }
 .navbar__link a:hover {
   color: lightgray;
@@ -82,6 +83,7 @@ body {
   position: absolute;
   left: 15%;
   top: 30%;
+  color: #65bf65;
 }
 @media only screen and (max-width: 950px) {
   .heading {
@@ -93,16 +95,16 @@ body {
   }
 }
 .heading__main {
-  font-size: 7rem;
-  font-weight: 600;
+  font-size: 8rem;
+  font-weight: 700;
 }
 .heading__sub {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
+  color: #faebd7;
   width: 100%;
   text-align: center;
-  color: #f8d82e;
 }
 
 .illustration {
@@ -135,7 +137,7 @@ body {
   background-color: #1b4e38;
 }
 .projects h2 {
-  color: #faebd7;
+  color: #65bf65;
   font-size: 7rem;
   padding-top: 6rem;
   font-weight: 500;
@@ -246,14 +248,16 @@ body {
 .about__heading {
   grid-row: 1/2;
   grid-column: 1/-1;
+  text-align: center;
   font-weight: 500;
-  color: #faebd7;
+  color: #65bf65;
   font-size: 5rem;
   padding-bottom: 3rem;
 }
 .about__photo {
   grid-row: 2/3;
   grid-column: 1/2;
+  justify-self: center;
   height: 30rem;
   border-radius: 2rem;
 }
