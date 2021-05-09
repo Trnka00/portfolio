@@ -2,32 +2,47 @@
 
 .header {
   background-image: repeating-linear-gradient(
-      73deg,
-      rgb(2, 56, 26) 0px,
-      rgb(2, 56, 26) 27px,
-      transparent 27px,
-      transparent 30px
+      3deg,
+      variables.$color-main 0px,
+      variables.$color-main 31px,
+      transparent 31px,
+      transparent 35px
     ),
     repeating-linear-gradient(
-      377deg,
-      rgb(2, 56, 26) 0px,
-      rgb(2, 56, 26) 27px,
-      transparent 27px,
-      transparent 30px
+      236deg,
+      variables.$color-main 0px,
+      variables.$color-main 31px,
+      transparent 31px,
+      transparent 35px
     ),
     repeating-linear-gradient(
-      55deg,
-      rgb(2, 56, 26) 0px,
-      rgb(2, 56, 26) 27px,
-      transparent 27px,
-      transparent 30px
+      343deg,
+      variables.$color-main 0px,
+      variables.$color-main 31px,
+      transparent 31px,
+      transparent 35px
     ),
-    linear-gradient(115deg, rgb(230, 245, 14), rgb(251, 249, 233));
+    repeating-linear-gradient(
+      282deg,
+      variables.$color-main 0px,
+      variables.$color-main 31px,
+      transparent 31px,
+      transparent 35px
+    ),
+    linear-gradient(
+      90deg,
+      variables.$color-ui-secondary,
+      variables.$color-ui-secondary
+    );
   background-size: 400% 400%;
   animation: gradient 120s ease-in-out infinite;
   height: 100vh;
   color: variables.$color-white;
   clip-path: polygon(100% 0, 100% 90%, 30% 90%, 0 60%, 0 0);
+
+  @media only screen and (max-width: 1230px) {
+    clip-path: polygon(100% 0, 100% 90%, 40% 90%, 0 60%, 0 0);
+  }
 
   @media only screen and (max-width: 950px) {
     clip-path: polygon(100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
@@ -39,7 +54,7 @@
     background-position: 0% 0%;
   }
   50% {
-    background-position: 0% 100%;
+    background-position: 100% 100%;
   }
   100% {
     background-position: 0% 0%;
@@ -48,13 +63,23 @@
 
 .nav-logo-wrap {
   display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
+  align-items: center;
+  height: 11rem;
+  z-index: 20;
 }
 
+.sticky {
+  position: fixed;
+  background-color: variables.$color-main;
+}
 .logo {
   text-align: center;
-  margin: 1.5rem 0 0 6rem;
+  margin: 0rem 0 0 6rem;
   height: 5rem;
   letter-spacing: 0;
 }
@@ -67,16 +92,16 @@
   margin-right: 6rem;
 
   &__link {
-    a {
-      color: variables.$color-btn;
-      text-decoration: none;
-      font-weight: 500;
-      &:hover {
-        color: rgb(211, 211, 211);
-      }
+    color: variables.$color-ui-primary;
+    text-decoration: none;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(211, 211, 211);
     }
   }
-  &__link:not(:last-child) {
+  li:not(:last-child) {
     margin-right: 4rem;
   }
 }
@@ -84,7 +109,7 @@
   position: absolute;
   left: 15%;
   top: 30%;
-  color: variables.$color-light-green;
+  color: variables.$color-ui-secondary;
 
   @media only screen and (max-width: 950px) {
     left: 50%;

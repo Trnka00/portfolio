@@ -27,6 +27,11 @@ html {
     font-size: 40%;
   }
 }
+@media only screen and (max-width: 365px) {
+  html {
+    font-size: 35%;
+  }
+}
 
 body {
   box-sizing: inherit;
@@ -35,12 +40,17 @@ body {
 }
 
 .header {
-  background-image: repeating-linear-gradient(73deg, #02381a 0px, #02381a 27px, transparent 27px, transparent 30px), repeating-linear-gradient(377deg, #02381a 0px, #02381a 27px, transparent 27px, transparent 30px), repeating-linear-gradient(55deg, #02381a 0px, #02381a 27px, transparent 27px, transparent 30px), linear-gradient(115deg, #e6f50e, #fbf9e9);
+  background-image: repeating-linear-gradient(3deg, #113b29 0px, #113b29 31px, transparent 31px, transparent 35px), repeating-linear-gradient(236deg, #113b29 0px, #113b29 31px, transparent 31px, transparent 35px), repeating-linear-gradient(343deg, #113b29 0px, #113b29 31px, transparent 31px, transparent 35px), repeating-linear-gradient(282deg, #113b29 0px, #113b29 31px, transparent 31px, transparent 35px), linear-gradient(90deg, #65bf65, #65bf65);
   background-size: 400% 400%;
   animation: gradient 120s ease-in-out infinite;
   height: 100vh;
   color: #faebd7;
   clip-path: polygon(100% 0, 100% 90%, 30% 90%, 0 60%, 0 0);
+}
+@media only screen and (max-width: 1230px) {
+  .header {
+    clip-path: polygon(100% 0, 100% 90%, 40% 90%, 0 60%, 0 0);
+  }
 }
 @media only screen and (max-width: 950px) {
   .header {
@@ -53,7 +63,7 @@ body {
     background-position: 0% 0%;
   }
   50% {
-    background-position: 0% 100%;
+    background-position: 100% 100%;
   }
   100% {
     background-position: 0% 0%;
@@ -61,13 +71,24 @@ body {
 }
 .nav-logo-wrap {
   display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
+  align-items: center;
+  height: 11rem;
+  z-index: 20;
+}
+
+.sticky {
+  position: fixed;
+  background-color: #113b29;
 }
 
 .logo {
   text-align: center;
-  margin: 1.5rem 0 0 6rem;
+  margin: 0rem 0 0 6rem;
   height: 5rem;
   letter-spacing: 0;
 }
@@ -80,15 +101,16 @@ body {
   list-style-type: none;
   margin-right: 6rem;
 }
-.navbar__link a {
+.navbar__link {
   color: #f8d82e;
   text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
 }
-.navbar__link a:hover {
+.navbar__link:hover {
   color: lightgray;
 }
-.navbar__link:not(:last-child) {
+.navbar li:not(:last-child) {
   margin-right: 4rem;
 }
 
@@ -152,13 +174,13 @@ body {
 .projects h2 {
   color: #65bf65;
   font-size: 7rem;
-  padding-top: 6rem;
+  padding-top: 12rem;
   font-weight: 500;
   text-align: center;
 }
 
 .project {
-  background-color: #083622;
+  background-color: #0b3f28;
   color: #faebd7;
   width: 80%;
   margin: 10rem auto;
