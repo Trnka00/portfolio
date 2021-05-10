@@ -1,6 +1,5 @@
 'use-strict';
 
-// sticky nav
 const header = document.querySelector('.header');
 const nav = document.querySelector('.nav-logo-wrap');
 const navHeight = nav.getBoundingClientRect().height;
@@ -21,11 +20,9 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(header);
 
-//link scroll
 document.querySelector('.navbar').addEventListener('click', function (e) {
   e.preventDefault();
 
-  // Matching strategy
   if (e.target.classList.contains('navbar__link')) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
